@@ -1,0 +1,42 @@
+.formControl{
+    margin-left:0%;
+    margin-bottom: 20%;
+    position: absolute;
+
+}
+.memeimg{
+
+   height: 25%;
+   width:25%;
+}
+
+.memecontainer{
+    position: relative;
+    /* text-align: center; */
+    color: white;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+.toptext{
+    position: absolute;
+    top: 1%;
+    left: 8%;
+    right:10%;
+    /* margin: 0 auto; */
+    max-width: 200px;
+  
+  
+
+    transform: translate(-25%, -25%);
+}
+
+.bottomtext{
+    position: absolute;
+    top: 60%;
+    left: 8%;
+    right:10%;
+    /* margin: 0 auto; */
+    max-width: 225px;
+    transform: translate(-25%, -25%);
+}

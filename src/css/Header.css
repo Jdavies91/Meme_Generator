@@ -1,0 +1,24 @@
+header {
+    background-color: #8a2be2;
+    padding-bottom: 9%;
+/*  */
+
+}
+header>img {
+    width:10%;
+    height: 10%;
+   float:left;
+}
+header>p {
+    
+    width:55%;
+    padding-right: 5%;
+    margin:0%;
+    padding-top: 0%;
+    max-width: 250px;
+    font-size: 40pt;
+    word-wrap: break-word;
+    float:left;
+    overflow:visible;
+    color:white;
+}
