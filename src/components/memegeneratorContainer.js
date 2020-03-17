@@ -1,5 +1,7 @@
 import React,{Component} from 'react'
 import '../css/MemeGenerator.css'
+import MemeColorPicker from './MemeFontColorPicker'
+import { StyleSheet, css } from 'aphrodite';
 import MemeGeneratorView from './memegeneratorview'
 class MemeGeneratorContainer extends Component{
     constructor(){
@@ -8,10 +10,12 @@ class MemeGeneratorContainer extends Component{
             top:"",
             bottom:"",
             randimg:'http://i.imgflip.com/1bij.jpg',
+            fontcolor:"#FFFFFF",
             allmemeimg:[]
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleClick = this.handleClick.bind(this)
+        // this.onChangeColor = this.onChangeColor.bind(this)
     }
     componentDidMount(){
         fetch('https://api.imgflip.com/get_memes').then(
@@ -46,10 +50,13 @@ class MemeGeneratorContainer extends Component{
     }
     render(){
         //https://api.imgflip.com/get_memes
-      
+        
       
         return(
-            <MemeGeneratorView top={this.state.top} bottom={this.state.bottom} randimg={this.state.randimg} handleChange={this.handleChange}     handleClick={this.handleClick } />
+            <div>
+            <MemeColorPicker fontcolors={this.state.fontcolor} handleChange={this.handleChange}/>
+            <MemeGeneratorView top={this.state.top} bottom={this.state.bottom} randimg={this.state.randimg} fontcolor={this.state.fontcolor} handleChange={this.handleChange}     handleClick={this.handleClick } />
+            </div>
         )
     }
 }

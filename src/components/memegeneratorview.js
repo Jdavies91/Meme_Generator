@@ -1,7 +1,16 @@
 import React from 'react'
-
+import { StyleSheet, css} from 'aphrodite'
 
 function MemeGeneratorView(props){
+    const divStyle = StyleSheet.create({
+        
+        memecontainer:{
+                position: 'relative',
+                textAlign: 'center',
+                color: props.fontcolor
+          }
+        });
+      
     return(
         <div>
             
@@ -14,11 +23,8 @@ function MemeGeneratorView(props){
           
         </form>
        
-        <div className="memecontainer">
-            
+        <div className={css(divStyle.memecontainer)}>
                 <h1 className='toptext'>{props.top}</h1>
-            
-   
                 <h1 className='bottomtext'>{props.bottom}</h1>
                 <img className="memeimg"src={props.randimg} alt="img" />
               

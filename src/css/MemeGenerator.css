@@ -10,33 +10,21 @@
    width:25%;
 }
 
-.memecontainer{
-    position: relative;
-    /* text-align: center; */
-    color: white;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
-}
 .toptext{
     position: absolute;
-    top: 1%;
-    left: 8%;
-    right:10%;
-    /* margin: 0 auto; */
+    top:5%;
+    left: 50%;
     max-width: 200px;
-  
-  
-
-    transform: translate(-25%, -25%);
+    transform: translate(-50%, -50%); 
 }
 
 .bottomtext{
     position: absolute;
-    top: 60%;
-    left: 8%;
-    right:10%;
-    /* margin: 0 auto; */
-    max-width: 225px;
-    transform: translate(-25%, -25%);
+    left: 50%;
+    top:75%;
+    max-width: 200px;
+  
+  
+
+    transform: translate(-50%, -50%);
 }
