@@ -15,14 +15,12 @@ class MemeGeneratorContainer extends Component{
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleClick = this.handleClick.bind(this)
-        // this.onChangeColor = this.onChangeColor.bind(this)
     }
     componentDidMount(){
         fetch('https://api.imgflip.com/get_memes').then(
             resp=> resp.json() 
         ).then(
             resp=>{ 
-                console.log(resp)
                 const {memes} = resp.data;
                 this.setState({allmemeimg: memes})
             }
@@ -39,19 +37,16 @@ class MemeGeneratorContainer extends Component{
         event.preventDefault()
 
         let randomNum =0;
-        console.log(this.state.allmemeimg.length)
+
         randomNum = Math.floor(Math.random() * this.state.allmemeimg.length)
-        //let imgggg =this.state.allmemeimg[randomNum].url;
-        let fd= this.state.allmemeimg[randomNum].url
-        console.log(fd)
+        let url= this.state.allmemeimg[randomNum].url
+
         
-            this.setState({randimg:fd})
+            this.setState({randimg:url})
     
     }
     render(){
-        //https://api.imgflip.com/get_memes
-        
-      
+    
         return(
             <div>
             <MemeColorPicker fontcolors={this.state.fontcolor} handleChange={this.handleChange}/>

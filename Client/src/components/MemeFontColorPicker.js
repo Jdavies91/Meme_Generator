@@ -6,7 +6,7 @@ function MemeColorPicker(props){
       
     return(
       <div>
-        <label for="fontcolor">Select your font color:</label>
+        <label for="fontcolor">Select your font color: </label>
         <input name="fontcolor" type="color" value={props.fontcolors} onChange={props.handleChange} />
       </div>
     )
